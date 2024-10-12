@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const $boton = $('.boton');
             const $ordenar = $('.ordenar');
             $boton.style.display = 'block'; // Mostrar el botón 'Ordenar'
-            $ordenar.style.margin = '0.5rem'; // Ajustar el margen del botón 'Ordenar'
+            $ordenar.style.margin = '1rem'; // Ajustar el margen del botón 'Ordenar'
             $ordenar.style.background = '#fff'; // Cambiar el color del botón 'Ordenar'
             $ordenar.style.color = '#000'; // Cambiar el color del texto del botón 'Ordenar'
             $ordenar.style.padding = '0.5rem'; // Ajustar el padding del botón 'Ordenar'
