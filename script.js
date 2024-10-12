@@ -10,26 +10,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Agrega un listener para el evento 'input'
-    $tamanoArreglo.addEventListener('input', function() {
-        // parseInt() convierte un string en un número entero
-        const tamano = parseInt($tamanoArreglo.value, 10); // El 10 indica que el valor es base 10
+    $tamanoArreglo.addEventListener('input', function() { 
+        const tamano = parseInt($tamanoArreglo.value, 10); // Convertir el valor de 'tamanoArreglo' a un número
 
         // Verificar que el valor de 'tamano' sea un número
-        if (isNaN(tamano) || tamano < 0) { // isNaN() verifica si el valor no es un número
+        if (isNaN(tamano) || tamano < 0) { // isNaN() verifica si el valor es un número
             console.error('El valor ingresado no es un número válido.');
             return;
         }
 
         const $casillasMain = $('.casillasMain');
         // Limpiar el contenido del div casillasMain
-        $casillasMain.innerHTML = '';
+        $casillasMain.innerHTML = ''; // Limpiar el contenido del div casillasMain
 
-        // Generar las casillas
-        for (let i = 0; i < tamano; i++) {
-            const casilla = document.createElement('input');
-            casilla.type = 'text';
-            casilla.className = 'casilla';
-            $casillasMain.appendChild(casilla);
+        // Generar las casillas si el valor no es vacío
+        if ($tamanoArreglo.value !== '') { // Verificar que el valor de 'tamano' no sea vacío
+            for (let i = 0; i < tamano; i++) { // Crear tantas casillas como el valor de 'tamano'
+                const casilla = document.createElement('input'); // Crear una nueva casilla
+                casilla.type = 'text'; // Agregar el atributo 'type'
+                casilla.className = 'casilla';  // Agregar la clase 'casilla'
+                $casillasMain.appendChild(casilla); // Agregar la casilla al div casillasMain
+            }
         }
     });
 });
