@@ -56,4 +56,19 @@ main {
         border-radius: 10px;
         outline: none;
     }
+
+    & .casillasMain {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        & .casilla {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            margin: 0.5rem;
+        }
+    }
 }
