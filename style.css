@@ -77,8 +77,17 @@ main {
         display: none;
     }
 
-    & .ordenar:hover {
+    & .unidades:hover {
         transform: scale(0.95);
         transition: all 0.5ms ease;
     }
 }
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  td,
+  th {
+    border: 1px solid wheat;
+  }

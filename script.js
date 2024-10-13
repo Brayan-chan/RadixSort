@@ -32,20 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 $casillasMain.appendChild(casilla);
             }
             const $boton = $('.boton');
-            const $ordenar = $('.ordenar');
+            const $unidades = $('.unidades');
             $boton.style.display = 'block';
-            $ordenar.style.margin = '1rem';
-            $ordenar.style.background = '#fff';
-            $ordenar.style.color = '#000';
-            $ordenar.style.padding = '0.5rem';
-            $ordenar.style.border = '2px solid #fff';
-            $ordenar.style.borderRadius = '10px';
+            $unidades.style.margin = '1rem';
+            $unidades.style.background = '#fff';
+            $unidades.style.color = '#000';
+            $unidades.style.padding = '0.5rem';
+            $unidades.style.border = '2px solid #fff';
+            $unidades.style.borderRadius = '10px';
         }
     });
 
-    // Agrega un listener para el botón 'Ordenar'
-    const $ordenar = $('.ordenar');
-    $ordenar.addEventListener('click', function() {
+    // Agrega un listener para el botón 'unidades'
+    const $unidades = $('.unidades');
+    $unidades.addEventListener('click', function() {
         const $casillasMain = $('.casillasMain');
         const casillas = Array.from($casillasMain.querySelectorAll('.casilla'));
         const valores = casillas.map(casilla => parseInt(casilla.value, 10));
