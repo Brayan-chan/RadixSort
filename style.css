@@ -1,92 +1,56 @@
-* {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, sans-serif;
 }
-
-body {
-    background: #000;
-    color: #fff;
-}
-
-main .title {
-    font-size: 2rem;
-    text-align: center;
-    margin: 2rem;
-}
-
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1rem;
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.mb-4 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.font-bold { font-weight: bold; }
+.text-2xl { font-size: 1.5rem; }
+.text-red-500 { color: #ef4444; }
+.grid { display: grid; }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.gap-2 { gap: 0.5rem; }
+.border { border: 1px solid #e5e7eb; }
+.p-2 { padding: 0.5rem; }
+.text-center { text-align: center; }
+.card {
+    background-color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 1rem;
 }
-
-.form-controler {
-    display: flex;
-    margin: 1rem;
-    gap: 1rem;
-    align-items: center;
-}
-
-.form-controler label {
-    font-size: 15px;
-}
-
-.form-controler input {
-    padding: 0.5rem;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    outline: none;
-}
-
-.casillasMain {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.casilla {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    margin: 0.5rem;
-    text-align: center;
-}
-
-.boton {
-    display: none;
-}
-
-.boton button {
+button, input {
+    font-size: 1rem;
     padding: 0.5rem 1rem;
-    background: #fff;
-    color: #000;
-    border: 2px solid #fff;
-    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+}
+button {
+    background-color: #3b82f6;
+    color: white;
     cursor: pointer;
 }
-
-.boton button:hover {
-    background: #ccc;
+button:hover {
+    background-color: #2563eb;
 }
-
 table {
     width: 100%;
-    margin-top: 1rem;
     border-collapse: collapse;
 }
-
-td, th {
-    border: 1px solid wheat;
-    padding: 10px;
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
     text-align: center;
+}
+.radix-table td:first-child {
+    font-weight: bold;
+    background-color: #f3f4f6;
 }
